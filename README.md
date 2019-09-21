@@ -14,4 +14,5 @@ Terima Kasih
 Abdurrahman Shofy Adianto
 abdurrahman.adianto.id
 
-
+## Sumber berita
+- https://nasional.okezone.com/read/2019/09/20/337/2107319/polri-sebut-asap-di-pekanbaru-sudah-clear-langit-terlihat-biru
