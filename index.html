@@ -33,11 +33,11 @@
     <div class="container" style=>
         <h1>Apa Riau Sedang Berasap?</h1>
 
-        <h1 class="info" style=''>YA</h1>
+        <h1 class="info" id="status" style=''>YA</h1>
 
         <p>
-            Update: 21-09-2019 12:00
-            Sumber: personal
+            Update: <span id="time">21-09-2019 12:00</span>
+            Sumber: <span id="source">personal</span>
         </p>
 
         <p>
@@ -69,7 +69,18 @@
         xhr.send();
     }
 
-    get_xhr('./data.json', function(a) { console.log(JSON.parse(a)); });
+    function get_el_by_id(id) {
+        return document.getElementById(id);
+    }
+
+    get_xhr('./data.json', function(a) { 
+        var data = JSON.parse(a);
+        console.log(data); 
+
+        get_el_by_id('status').innerHTML = data.status;
+        get_el_by_id('time').innerHTML = data.time;
+        get_el_by_id('source').innerHTML = data.source;
+    });
     </script>
 </body>
 </html>
