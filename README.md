@@ -16,3 +16,12 @@ abdurrahman.adianto.id
 
 ## Sumber berita
 - https://nasional.okezone.com/read/2019/09/20/337/2107319/polri-sebut-asap-di-pekanbaru-sudah-clear-langit-terlihat-biru
+
+## todo
+- bikin halaman jadi responsive
+- kasih  link donasi2
+- kasih sumber bmkg
+- kasih link streming riau
+- bikin sistem update 1 jam sekali antara jam 6-20
+- bikin download data bmkg & live streaming 1 jam sekali
+- auto post ke twitter, connect dengan ifttt ke ig, fb, telegram

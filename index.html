@@ -2,21 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Apa Riau Sedang Berasap?</title>
 </head>
 <body>
-    <div style='text-align:center'>
+    <style>
+    body {
+        width: 100%;
+        background-color: #eee;
+    } 
+
+    .container {
+        text-align:center;
+    }
+
+    .info {
+        font-size:90px;
+        color:red
+    }
+
+    @media only screen and (min-width: 768px) {
+        .container {
+        }
+
+        .content {
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+    }
+    </style>
+    <div class="container" style=>
         <h1>Apa Riau Sedang Berasap?</h1>
 
-        <h1 style='font-size:70px;font-color:red'>YA</h1>
+        <h1 class="info" style=''>YA</h1>
 
-        Update: 21-09-2019 12:00
-        Sumber: personal
+        <p>
+            Update: 21-09-2019 12:00
+            Sumber: personal
+        </p>
 
-        <p>Masyarakat Riau dan daerah-daerah lainnya sedang menderita akibat asap. Jutaan orang terancam penyakit pernafasan, ribuan bayi dan ibu hamil terancam jiwanya, roda ekonomi tergangunggu, negara rugi milyaran rupiah setiap harinya. Bantu sekarang juga.</p>
+        <p>
+            Referensi
+            <ul>
+                <li><a target="_blank" href="https://www.bmkg.go.id/kualitas-udara/informasi-partikulat-pm10.bmkg?Lokasi=PEKANBARU">Informasi Kualitas Udara Pekanbaru dari BMKG</a></li>
+                <li><a target="_blank" href="http://cctv.pekanbaru.go.id/live/">CCTV Lalulintas Pekanbaru</a></li>
+            </ul>
+        </p>
 
-        <p>Dibuat oleh: <a href="https://abdurrahman.adianto.id">Abdurrahman Shofy Adianto</a></p>
+        <p class="content">Masyarakat Riau dan daerah-daerah lainnya sedang menderita akibat asap. Jutaan orang terancam penyakit pernafasan, ribuan bayi dan ibu hamil terancam jiwanya, roda ekonomi tergangunggu, negara rugi milyaran rupiah setiap harinya. Bantu sekarang juga.</p>
+
+        <p>&copy; 2019: <a href="https://abdurrahman.adianto.id">Abdurrahman Shofy Adianto</a> . Situs ini adalah situs non-profit dan tidak berafiliasi dengan lembaga manapun, situs ini murni dibuat oleh saya sendiri untuk masyarakat Indonesia.</p>
     </div>
+    <script>
+    function get_xhr(url, onSuccess) {
+        /* ref: https://blog.garstasio.com/you-dont-need-jquery/ajax/ */
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',url);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                //return [xhr.status, xhr.responseText];
+                onSuccess(xhr.responseText);
+            }
+            else {
+                return [xhr.status, null];
+            }
+        };
+        xhr.send();
+    }
+
+    get_xhr('./data.json', function(a) { console.log(JSON.parse(a)); });
+    </script>
 </body>
 </html>
 
