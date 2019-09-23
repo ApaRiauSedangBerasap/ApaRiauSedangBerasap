@@ -83,6 +83,7 @@
         console.log(data); 
 
         get_el_by_id('status').innerHTML = data.status;
+        get_el_by_id('status').style.color = data.color;
         get_el_by_id('time').innerHTML = data.time;
         get_el_by_id('source').innerHTML = data.source;
     });
